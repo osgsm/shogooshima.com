@@ -1,27 +1,27 @@
-import Head from "next/head";
-import Link from "next/link";
-import Layout, { siteTitle } from "../components/layout";
-import Date from "../components/date";
-import utilStyles from "../styles/utils.module.css";
+import Head from 'next/head'
+import Link from 'next/link'
+import Layout, { siteTitle } from '../components/layout'
+import Date from '../components/date'
+import utilStyles from '../styles/utils.module.css'
 
-import { getSortedPostsData } from "../lib/posts";
+import { getSortedPostsData } from '../lib/posts'
 
 type HomeProps = {
   allPostsData: {
-    id: string;
-    date: string;
-    title: string;
-  }[];
-};
+    id: string
+    date: string
+    title: string
+  }[]
+}
 
 export const getStaticProps = async () => {
-  const allPostsData = getSortedPostsData();
+  const allPostsData = getSortedPostsData()
   return {
     props: {
       allPostsData,
     },
-  };
-};
+  }
+}
 
 const Home = ({ allPostsData }: HomeProps) => {
   return (
@@ -46,7 +46,7 @@ const Home = ({ allPostsData }: HomeProps) => {
         </ul>
       </section>
     </Layout>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

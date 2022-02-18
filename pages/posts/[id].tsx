@@ -1,34 +1,34 @@
-import Head from 'next/head';
-import Layout from '../../components/layout';
-import { getAllPostIds, getPostData } from '../../lib/posts';
-import Date from '../../components/date';
-import utilStyle from '../../styles/utils.module.css';
-import { GetStaticProps, GetStaticPaths } from 'next';
+import Head from 'next/head'
+import Layout from '../../components/layout'
+import { getAllPostIds, getPostData } from '../../lib/posts'
+import Date from '../../components/date'
+import utilStyle from '../../styles/utils.module.css'
+import { GetStaticProps, GetStaticPaths } from 'next'
 
 type PostProps = {
   postData: {
-    title: string;
-    date: string;
-    contentHtml: string;
-  };
-};
+    title: string
+    date: string
+    contentHtml: string
+  }
+}
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const postData = await getPostData(params?.id as string);
+  const postData = await getPostData(params?.id as string)
   return {
     props: {
       postData,
     },
-  };
-};
+  }
+}
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = getAllPostIds();
+  const paths = getAllPostIds()
   return {
     paths,
     fallback: false,
-  };
-};
+  }
+}
 
 const Post = ({ postData }: PostProps) => {
   return (
@@ -44,7 +44,7 @@ const Post = ({ postData }: PostProps) => {
       </div>
       <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
     </Layout>
-  );
-};
+  )
+}
 
-export default Post;
+export default Post
