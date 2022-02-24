@@ -35,6 +35,7 @@ const Post = ({ postData }: PostProps) => {
     <Layout>
       <Head>
         <title>{postData.title}</title>
+        <meta name="og:title" content={postData.title} />
       </Head>
       <article>
         <h1 className={utilStyle.headingXl}>{postData.title}</h1>
