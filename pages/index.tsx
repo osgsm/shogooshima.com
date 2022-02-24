@@ -28,6 +28,7 @@ const Home = ({ allPostsData }: HomeProps) => {
     <Layout home>
       <Head>
         <title>{siteTitle}</title>
+        <meta property="og:type" content="website" />
       </Head>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
