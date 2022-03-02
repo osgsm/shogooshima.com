@@ -22,7 +22,7 @@ Next.js v11.0.0 からは、 ESLint の導入が手軽にできるようにな�
 > Since version **11.0.0**, Next.js provides an integrated [ESLint](https://eslint.org/) experience out of the box. Add `next lint` as a script to `package.json`:  
 > *引用元: [https://nextjs.org/docs/basic-features/eslint](https://nextjs.org/docs/basic-features/eslint)*
 
-`package.json` に次のようなスクリプトを追加して `yarn lint` を実行します。
+`package.json` に次のようにスクリプトを追加して `yarn lint` を実行します。
 
 ```json
 "scripts": {
@@ -85,7 +85,7 @@ Next.js v11.0.0 からは、 ESLint の導入が手軽にできるようにな�
 
 なぜなら、 `next/core-web-vitals` では、パーサーやプラグインなどの設定がなされていて、その設定が上書きされないようにする必要があるからです。
 
-公式ドキュメントいわく……
+公式ドキュメントには次のように書かれています。
 
 > [If you include any other shareable configurations, **you will need to make sure that these properties are not overwritten or modified**.](https://nextjs.org/docs/basic-features/eslint#additional-configurations)
 
@@ -93,7 +93,7 @@ Next.js v11.0.0 からは、 ESLint の導入が手軽にできるようにな�
 
 `"eslint:recommended"` の追加が終わったら、 TypeScript 用の推奨ルールを追加します。
 
-[Linting your TypeScript Codebase | TypeScript ESLint](https://typescript-eslint.io/docs/linting/) のドキュメントによると、まずは次のパッケージをインストールする必要があります。  
+[TypeScript ESLint](https://typescript-eslint.io/docs/linting/) のドキュメントによると、まずは次のパッケージをインストールする必要があります。  
 
 ```bash
 yarn add -D eslint typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin
@@ -232,7 +232,7 @@ ESLint の動作については OK ですが、毎回 ESLint を走らせるた�
 
 詳しい内容はこちら [https://github.com/vercel/next.js/blob/canary/packages/eslint-config-next/index.js](https://github.com/vercel/next.js/blob/canary/packages/eslint-config-next/index.js)
 
-`eslint-plugin-next` というのは、Next.js が提供している ESLint プラグイン。どのようなルールがあるかは、[公式ドキュメント](https://nextjs.org/docs/basic-features/eslint#eslint-plugin)に書かれています。
+`eslint-plugin-next` というのは、Next.js が提供している ESLint プラグイン。どのようなルールがあるかは、[Basic Features: ESLint | Next.js](https://nextjs.org/docs/basic-features/eslint#eslint-plugin) に書かれています。
 
 ## さいごに
 
