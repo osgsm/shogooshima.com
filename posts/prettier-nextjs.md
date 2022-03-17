@@ -17,8 +17,8 @@ Prettier を使うとインデントや改行、セミコロンの有無など�
 
 ESLint 導入済みの環境に Prettier を加えるためには次の2つのパッケージが必要です。
 
--   `prettier` – Prettier 本体
--   `eslint-config-prettier` – Prettier と競合する可能性のある ESLint の各種ルールを無効にする共有設定
+- `prettier` – Prettier 本体
+- `eslint-config-prettier` – Prettier と競合する可能性のある ESLint の各種ルールを無効にする共有設定
 
 ```bash
 yarn add -D prettier eslint-config-prettier
@@ -37,7 +37,7 @@ Prettier 本体に加えて、 [eslint-config-prettier](https://github.com/prett
 ```json
 extends: [
     ︙
-	'prettier',
+  'prettier',
   ],
 ```
 
@@ -48,7 +48,6 @@ extends: [
 公式ドキュメントでも次のように言っています。
 
 > [Then, add "prettier" to the "extends" array in your .eslintrc.* file. Make sure to put it last, so it gets the chance to override other configs.](https://github.com/prettier/eslint-config-prettier)
-
 
 ### コンフリクトするルールがないかチェックする
 
@@ -86,6 +85,7 @@ No rules that are unnecessary or conflict with Prettier were found.
 ```
 
 ## Prettier の設定
+
 ### `.prettierrc` を作成する
 
 まずはファイルを作成し…
@@ -124,7 +124,7 @@ public
 posts
 ```
 
-###  `--check` オプションを使って走らせてみる
+### `--check` オプションを使って走らせてみる
 
 一旦この辺で Prettier を走らせてみましょう。
 
@@ -168,7 +168,7 @@ Prettier を実行するための script を `package.json` に 追加します�
 
 ここで紹介する Visual Studio Code の設定を行うと、ファイル保存時に Prettier を走らせ、自動フォーマットすることができます。
 
-まずは拡張機能のインストールから。次のリンクからインストールできます。    
+まずは拡張機能のインストールから。次のリンクからインストールできます。  
 [Prettier - Code formatter - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 
 次に、Visual Studio Code の `settings.json` に次の内容を追加します。
@@ -266,6 +266,7 @@ const Home = ({ allPostsData }: HomeProps) => {
 ---
 
 参考
+
 - [Basic Features: ESLint | Next.js](https://nextjs.org/docs/basic-features/eslint#prettier)
 - [What is Prettier? · Prettier](https://prettier.io/docs/en/index.html)
 - [CLI · Prettier](https://prettier.io/docs/en/cli.html)
