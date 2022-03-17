@@ -65,7 +65,7 @@ const Post = ({ postData }: PostProps) => {
 
 このブログでは、全ページで `Layout` コンポーネントを使い回していて、そこでも `og:title` を指定しています。そのため、重複してレンダリングされるというわけです。
 
-これを防ぐためには `key` プロパティを使います。この対策方法については[公式ドキュメント]((https://nextjs.org/docs/api-reference/next/head))にも書かれています。
+これを防ぐためには `key` プロパティを使います。この対策方法については[公式ドキュメント](https://nextjs.org/docs/api-reference/next/head)にも書かれています。
 
 `Layout` コンポーネント側は次のように設定し、
 
