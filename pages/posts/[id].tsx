@@ -4,12 +4,13 @@ import { getAllPostIds, getPostData } from '../../lib/posts'
 import Date from '../../components/date'
 import utilStyle from '../../styles/utils.module.css'
 import { GetStaticProps, GetStaticPaths } from 'next'
+import ReactMarkdown from 'react-markdown'
 
 type PostProps = {
   postData: {
     title: string
     date: string
-    contentHtml: string
+    contentMarkdown: string
   }
 }
 
@@ -44,7 +45,9 @@ const Post = ({ postData }: PostProps) => {
       <div className={utilStyle.lightText}>
         <Date dateString={postData.date} />
       </div>
-      <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+      <div>
+        <ReactMarkdown>{postData.contentMarkdown}</ReactMarkdown>
+      </div>
     </Layout>
   )
 }

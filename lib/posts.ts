@@ -1,8 +1,6 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
-import { remark } from 'remark'
-import html from 'remark-html'
 
 type MatterResultData = {
   title: string
@@ -55,15 +53,11 @@ export const getPostData = async (id: string) => {
   const fileContents = fs.readFileSync(fullPath, 'utf8')
 
   const matterResult = matter(fileContents)
-
-  const processedContent = await remark()
-    .use(html)
-    .process(matterResult.content)
-  const contentHtml = processedContent.toString()
+  const contentMarkdown = matterResult.content
 
   return {
     id,
-    contentHtml,
+    contentMarkdown,
     ...(matterResult.data as MatterResultData),
   }
 }
