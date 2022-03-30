@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://shogooshima.com/</loc>
+    <lastmod>2021-03-30</lastmod>
+  </url>
+  <url>
+    <loc>https://shogooshima.com/posts/first-post</loc>
+    <lastmod>2021-02-16</lastmod>
+  </url>
+  <url>
+    <loc>https://shogooshima.com/posts/set-up-eslint-nextjs</loc>
+    <lastmod>2021-03-02</lastmod>
+  </url>
+  <url>
+    <loc>https://shogooshima.com/posts/prettier-nextjs</loc>
+    <lastmod>2021-03-17</lastmod>
+  </url>
+  <url>
+    <loc>https://shogooshima.com/posts/fix-meta-ogp</loc>
+    <lastmod>2021-03-17</lastmod>
+  </url>
+  <url>
+    <loc>https://shogooshima.com/posts/use-react-markdown</loc>
+    <lastmod>2021-03-24</lastmod>
+  </url>
+</urlset>
